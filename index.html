@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boda - Valentina & Alejandro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <audio id="audio" src="audio/audio.mp3" loop></audio>
+    <button id="btn-musica" class="btn-musica" onclick="toggleMusica()">
+        <i class="fas fa-volume-up"></i>
+    </button>
+
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <p class="hero-date">15 . 08 . 2026</p>
+            <h1 class="hero-names">Valentina<br>& Alejandro</h1>
+            <a href="#intro" class="hero-btn" onclick="iniciarMusica(); document.getElementById('intro').scrollIntoView({behavior: 'smooth'}); return false;">Invitación</a>
+        </div>
+    </section>
+
+    <section id="intro" class="intro">
+        <p class="intro-text">NOS CASAMOS</p>
+        <p class="intro-parents">Con la bendición de</p>
+        <p class="intro-fathers">Roberto Rojas & Carolina Pérez</p>
+        <p class="intro-fathers">Alberto Muñoz & Sandra Herrera</p>
+    </section>
+
+    <section id="countdown" class="countdown" data-fecha="2026-08-15" data-hora="18:00">
+        <div class="countdown-item">
+            <span class="countdown-num" id="days">00</span>
+            <span class="countdown-label">días</span>
+        </div>
+        <div class="countdown-sep">:</div>
+        <div class="countdown-item">
+            <span class="countdown-num" id="hours">00</span>
+            <span class="countdown-label">horas</span>
+        </div>
+        <div class="countdown-sep">:</div>
+        <div class="countdown-item">
+            <span class="countdown-num" id="minutes">00</span>
+            <span class="countdown-label">min</span>
+        </div>
+        <div class="countdown-sep">:</div>
+        <div class="countdown-item">
+            <span class="countdown-num" id="seconds">00</span>
+            <span class="countdown-label">seg</span>
+        </div>
+    </section>
+
+    <section id="details" class="details">
+        <div class="details-content">
+            <div class="detail-item">
+                <span class="detail-label">Fecha</span>
+                <span class="detail-value">15 de Agosto 2026</span>
+            </div>
+            <div class="detail-item">
+                <span class="detail-label">Hora</span>
+                <span class="detail-value">18:00 hs</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="ceremony" class="ceremony">
+        <p class="ceremony-type">CEREMONIA</p>
+        <h2 class="ceremony-venue">Iglesia San Miguel</h2>
+        <p class="ceremony-address">Av. Corrientes 1500, Centro</p>
+        <p class="ceremony-time">18:00 HS</p>
+        <a href="https://maps.app.goo.gl/abc123" target="_blank" class="ceremony-map">MAPA</a>
+    </section>
+
+    <section id="recepcion" class="recepcion">
+        <p class="recepcion-type">RECEPCIÓN</p>
+        <h2 class="recepcion-venue">The Grand Palace</h2>
+        <p class="recepcion-address">Av. Libertador 2500, Palermo</p>
+        <p class="recepcion-time">19:30 HS - Cocktail</p>
+        <p class="recepcion-time">20:30 HS - Cena</p>
+        <a href="https://maps.app.goo.gl/abc123" target="_blank" class="recepcion-map">MAPA</a>
+    </section>
+
+    <section id="itinerario" class="itinerario">
+        <p class="itinerario-title">PROGRAMA</p>
+        <div class="itinerario-list">
+            <div class="itinerario-item">
+                <span class="itinerario-time">18:00</span>
+                <span class="itinerario-text">Ceremonia</span>
+            </div>
+            <div class="itinerario-item">
+                <span class="itinerario-time">19:30</span>
+                <span class="itinerario-text">Cocktail</span>
+            </div>
+            <div class="itinerario-item">
+                <span class="itinerario-time">20:30</span>
+                <span class="itinerario-text">Cena</span>
+            </div>
+            <div class="itinerario-item">
+                <span class="itinerario-time">22:00</span>
+                <span class="itinerario-text">Primer Baile</span>
+            </div>
+            <div class="itinerario-item">
+                <span class="itinerario-time">23:00</span>
+                <span class="itinerario-text">Fiesta</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="info" class="info">
+        <div class="info-item">
+            <i class="fas fa-car"></i>
+            <span class="info-label">Estacionamiento</span>
+            <span class="info-text">Valet disponible</span>
+        </div>
+        <div class="info-item">
+            <i class="fas fa-bus"></i>
+            <span class="info-label">Transporte</span>
+            <span class="info-text">Shuttle desde hotel</span>
+        </div>
+        <div class="info-item">
+            <i class="fas fa-bed"></i>
+            <span class="info-label">Hospedaje</span>
+            <span class="info-text">Hotel partner: 20% dto</span>
+        </div>
+    </section>
+
+    <section id="dresscode" class="dresscode">
+        <p class="dresscode-label">DRESS CODE</p>
+        <p class="dresscode-value">FORMAL</p>
+        <p class="dresscode-note">No usar blanco</p>
+    </section>
+
+    <section id="frase" class="frase">
+        <p class="frase-text">"Two souls, one heart."</p>
+    </section>
+
+    <section id="registry" class="registry">
+        <p class="registry-label">MESA DE REGALOS</p>
+        <div class="registry-buttons">
+            <button class="registry-btn" onclick="openModal()">TRANSFERENCIA</button>
+            <a href="https://amazon.com" target="_blank" class="registry-link">LISTA</a>
+        </div>
+    </section>
+
+    <section id="instagram" class="instagram">
+        <p class="instagram-label">#VALEANDALE</p>
+        <p class="instagram-user">@vale.ale.boda</p>
+    </section>
+
+    <section id="rsvp" class="rsvp">
+        <p class="rsvp-label">CONFIRMAR ASISTENCIA</p>
+        <p class="rsvp-date">Antes del 15 de Julio</p>
+        <p class="rsvp-note">Incluir nombre y cantidad de invitados</p>
+        <a href="https://wa.me/5491112345678?text=Hola%2C%20quiero%20confirmar%20asistencia%20a%20la%20boda%20de%20Valentina%20y%20Alejandro" target="_blank" class="rsvp-btn">WHATSAPP</a>
+    </section>
+
+    <section id="footer" class="footer">
+        <p class="footer-names">V & A</p>
+        <p class="footer-date">15 . 08 . 2026</p>
+    </section>
+
+    <div id="modal" class="modal" onclick="closeModal(event)">
+        <div class="modal-content">
+            <p class="modal-title">DATOS DE TRANSFERENCIA</p>
+            <div class="modal-row">
+                <span>Banco</span>
+                <span>Galicia</span>
+            </div>
+            <div class="modal-row">
+                <span>CBU</span>
+                <span>0000003100123456789012</span>
+            </div>
+            <div class="modal-row">
+                <span>Alias</span>
+                <span>VALE.ALE.BODA</span>
+            </div>
+            <div class="modal-row">
+                <span>Titular</span>
+                <span>Valentina Rojas</span>
+            </div>
+            <button class="modal-btn" onclick="closeModal()">CERRAR</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

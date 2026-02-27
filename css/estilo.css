@@ -1,0 +1,655 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #fff;
+    color: #000;
+    overflow-x: hidden;
+    line-height: 1.5;
+}
+
+a, button {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+section {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    position: relative;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ============ BOTÓN MÚSICA ============ */
+.btn-musica {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid #000;
+    background: #fff;
+    color: #000;
+    font-size: 14px;
+    cursor: pointer;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.btn-musica:hover {
+    background: #000;
+    color: #fff;
+}
+
+.btn-musica.playing {
+    background: #000;
+    color: #fff;
+}
+
+/* ============ HERO ============ */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    padding: 40px 20px;
+}
+
+.hero-content {
+    text-align: center;
+    animation: slideUp 0.8s ease;
+}
+
+.hero-date {
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.hero-names {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 48px;
+    font-weight: 400;
+    letter-spacing: -1px;
+    line-height: 1.1;
+    margin-bottom: 50px;
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: 14px 40px;
+    border: 1px solid #000;
+    color: #000;
+    font-size: 11px;
+    letter-spacing: 3px;
+    transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+    background: #000;
+    color: #fff;
+}
+
+/* ============ INTRO ============ */
+.intro {
+    padding: 80px 20px;
+    background: #000;
+    text-align: center;
+}
+
+.intro-text {
+    font-size: 11px;
+    letter-spacing: 6px;
+    color: #fff;
+}
+
+/* ============ DETAILS ============ */
+.details {
+    padding: 60px 20px;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.details-content {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+.detail-item {
+    text-align: center;
+}
+
+.detail-label {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #999;
+    margin-bottom: 8px;
+}
+
+.detail-value {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* ============ COUNTDOWN ============ */
+.countdown {
+    padding: 50px 20px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.countdown-item {
+    text-align: center;
+}
+
+.countdown-num {
+    display: block;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.countdown-label {
+    font-size: 9px;
+    letter-spacing: 1px;
+    color: #999;
+}
+
+.countdown-sep {
+    font-size: 24px;
+    color: #ccc;
+    margin-top: -15px;
+}
+
+/* ============ CEREMONY ============ */
+.ceremony {
+    padding: 80px 20px;
+    background: #f5f5f5;
+    text-align: center;
+}
+
+.ceremony-type {
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.ceremony-venue {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.ceremony-address {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.ceremony-map {
+    display: inline-block;
+    padding: 10px 30px;
+    border: 1px solid #000;
+    color: #000;
+    font-size: 10px;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+}
+
+.ceremony-map:hover {
+    background: #000;
+    color: #fff;
+}
+
+/* ============ DRESSCODE ============ */
+.dresscode {
+    padding: 60px 20px;
+    background: #fff;
+    text-align: center;
+    border-top: 1px solid #eee;
+}
+
+.dresscode-label {
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #999;
+    margin-bottom: 10px;
+}
+
+.dresscode-value {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+/* ============ FRASE ============ */
+.frase {
+    padding: 80px 20px;
+    background: #000;
+    text-align: center;
+}
+
+.frase-text {
+    font-size: 18px;
+    color: #fff;
+    font-style: italic;
+    font-weight: 300;
+}
+
+/* ============ REGISTRY ============ */
+.registry {
+    padding: 60px 20px;
+    background: #fff;
+    text-align: center;
+    border-top: 1px solid #eee;
+}
+
+.registry-label {
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #999;
+    margin-bottom: 20px;
+}
+
+.registry-link {
+    display: inline-block;
+    padding: 12px 30px;
+    border: 1px solid #000;
+    color: #000;
+    font-size: 11px;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+}
+
+.registry-link:hover {
+    background: #000;
+    color: #fff;
+}
+
+/* ============ RSVP ============ */
+.rsvp {
+    padding: 80px 20px;
+    background: #f5f5f5;
+    text-align: center;
+}
+
+.rsvp-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.rsvp-date {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.rsvp-btn {
+    display: inline-block;
+    padding: 16px 40px;
+    background: #000;
+    color: #fff;
+    font-size: 11px;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+}
+
+.rsvp-btn:hover {
+    background: #333;
+    transform: translateY(-2px);
+}
+
+/* ============ FOOTER ============ */
+.footer {
+    padding: 60px 20px;
+    background: #000;
+    text-align: center;
+}
+
+.footer-names {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.footer-date {
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #666;
+}
+
+/* ============ MODAL ============ */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.98);
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.modal.active {
+    display: flex;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+    background: #fff;
+    border: 1px solid #000;
+    padding: 40px 30px;
+    max-width: 320px;
+    width: 100%;
+    text-align: center;
+}
+
+.modal-title {
+    font-size: 11px;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+}
+
+.modal-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 13px;
+}
+
+.modal-row:last-of-type {
+    border-bottom: none;
+    margin-bottom: 25px;
+}
+
+.modal-row span:first-child {
+    color: #999;
+}
+
+.modal-row span:last-child {
+    font-weight: 500;
+}
+
+.modal-btn {
+    padding: 14px 35px;
+    background: #000;
+    color: #fff;
+    border: none;
+    font-size: 10px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.modal-btn:hover {
+    background: #333;
+}
+
+/* ============ INTRO PADRES ============ */
+.intro-parents {
+    font-size: 11px;
+    color: #999;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.intro-fathers {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+/* ============ RECEPCION ============ */
+.recepcion {
+    padding: 50px 20px;
+    background: #fafafa;
+    text-align: center;
+    border-top: 1px solid #eee;
+}
+
+.recepcion-type {
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #999;
+    margin-bottom: 15px;
+}
+
+.recepcion-venue {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.recepcion-address {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.recepcion-time {
+    font-size: 13px;
+    color: #333;
+    margin-bottom: 3px;
+}
+
+.recepcion-map {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 25px;
+    border: 1px solid #000;
+    color: #000;
+    font-size: 10px;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+}
+
+.recepcion-map:hover {
+    background: #000;
+    color: #fff;
+}
+
+/* ============ ITINERARIO ============ */
+.itinerario {
+    padding: 50px 20px;
+    background: #fff;
+    border-top: 1px solid #eee;
+}
+
+.itinerario-title {
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #999;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.itinerario-list {
+    max-width: 280px;
+    margin: 0 auto;
+}
+
+.itinerario-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 13px;
+}
+
+.itinerario-item:last-child {
+    border-bottom: none;
+}
+
+.itinerario-time {
+    color: #000;
+    font-weight: 500;
+}
+
+.itinerario-text {
+    color: #666;
+}
+
+/* ============ INFO ============ */
+.info {
+    padding: 40px 20px;
+    background: #fafafa;
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid #eee;
+}
+
+.info-item {
+    text-align: center;
+    flex: 1;
+}
+
+.info-item i {
+    font-size: 18px;
+    color: #000;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.info-label {
+    display: block;
+    font-size: 9px;
+    letter-spacing: 1px;
+    color: #999;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+}
+
+.info-text {
+    font-size: 10px;
+    color: #333;
+}
+
+/* ============ REGISTRY BUTTONS ============ */
+.registry-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.registry-btn {
+    padding: 12px 25px;
+    border: 1px solid #000;
+    background: #000;
+    color: #fff;
+    font-size: 10px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.registry-btn:hover {
+    background: #333;
+}
+
+.registry-link {
+    padding: 12px 25px;
+    border: 1px solid #000;
+    color: #000;
+    font-size: 10px;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+}
+
+.registry-link:hover {
+    background: #000;
+    color: #fff;
+}
+
+/* ============ INSTAGRAM ============ */
+.instagram {
+    padding: 50px 20px;
+    background: #fafafa;
+    text-align: center;
+    border-top: 1px solid #eee;
+}
+
+.instagram-label {
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 8px;
+}
+
+.instagram-user {
+    font-size: 12px;
+    color: #666;
+}
+
+/* ============ RSVP NOTE ============ */
+.rsvp-note {
+    font-size: 11px;
+    color: #999;
+    margin-bottom: 20px;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 380px) {
+    .hero-names {
+        font-size: 40px;
+    }
+    
+    .details-content {
+        gap: 30px;
+    }
+    
+    .countdown-sep {
+        display: none;
+    }
+
+    .info {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .registry-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
