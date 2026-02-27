@@ -43,8 +43,8 @@ section {
 /* ============ BOTÓN MÚSICA ============ */
 .btn-musica {
     position: fixed;
-    top: 20px;
-    right: 20px;
+    bottom: 25px;
+    right: 25px;
     width: 44px;
     height: 44px;
     border-radius: 50%;
