@@ -285,21 +285,6 @@ section {
     margin-bottom: 20px;
 }
 
-.registry-link {
-    display: inline-block;
-    padding: 12px 30px;
-    border: 1px solid #000;
-    color: #000;
-    font-size: 11px;
-    letter-spacing: 2px;
-    transition: all 0.3s ease;
-}
-
-.registry-link:hover {
-    background: #000;
-    color: #fff;
-}
-
 /* ============ RSVP ============ */
 .rsvp {
     padding: 80px 20px;
@@ -587,20 +572,6 @@ section {
 
 .registry-btn:hover {
     background: #333;
-}
-
-.registry-link {
-    padding: 12px 25px;
-    border: 1px solid #000;
-    color: #000;
-    font-size: 10px;
-    letter-spacing: 2px;
-    transition: all 0.3s ease;
-}
-
-.registry-link:hover {
-    background: #000;
-    color: #fff;
 }
 
 /* ============ INSTAGRAM ============ */
